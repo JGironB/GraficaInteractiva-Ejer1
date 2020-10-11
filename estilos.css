@@ -1,13 +1,495 @@
+/* Fuente usada en todo el documento, descargada de Google */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
+* {
+  font-family: "Open Sans";
+}
+
 body {
+  /* Imagen de Marte de fondo */
   background-image: url("./imagenes/background.png");
+  /* Reescalar la imagen para que tome el tamaño de la pantalla del usuario */
   background-size: 100% 100vh;
   margin: 0px;
+  width: 100vw; /* Ancho del tamaño de la ventana */
+  height: 100vh; /* Alto del tamaño de la ventana */
 }
-
+ol {
+  color: white;
+}
+/* Menú de navegación vertical */
 #nav-menu {
-  width: 20%;
-  height: 100vh;
-  background: black;
-  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  /* Opacidad para el menu para que se alcance
+   a ver algo de la imagen de fondo */
+  opacity: 0.7;
+  box-shadow: 0 400px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1); /* Codigo que genera una apariencia de carta 3d en el contenedor */
 }
 
+/* elementos del menu desplegable*/
+.label-icon,
+#btn-menu {
+  display: none; /* oculta el checkbox cuando no es necesario*/
+  cursor: pointer;
+}
+
+/* Div principal, contiene al menu y al div de información */
+.content {
+  width: 100%;
+  height: 100%;
+
+  /* Uso de propiedad flex para disponer los principales
+   divs de la página de manera horizontal  */
+  display: flex;
+  flex-direction: row;
+}
+
+/* Contenedor de menú de navegación vertical */
+#contenedor-menu-nav {
+  min-width: 15%;
+  height: 100%;
+}
+
+/* Contenedor de la información superpuesta sobre
+ el contenedor del menu */
+#menu-info {
+  position: absolute; /* Se ubica superpuesto al contendor padre*/
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100%;
+}
+
+/* Contenedor del icono home*/
+#contenedor-icono {
+  margin-top: 1rem;
+  margin-left: calc(50% - 2.5em); /* Calculo para centrar el icono */
+  margin-bottom: 4rem;
+}
+
+/* Icono de home */
+#icono-home {
+  color: white;
+}
+
+#icono-home:hover {
+  color: rgb(
+    204,
+    201,
+    201
+  ); /* Oscurecer color del Icono de home cuando esta por encima el cursor*/
+}
+
+.botones {
+  margin-left: 0.5rem;
+}
+
+/* Boton de menu vertical*/
+.nav-boton {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* Cambiar de color para manifestar en que seccion estamos*/
+.nav-boton-seleccionado {
+  color: #576ca8;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.nav-boton-div {
+  padding-right: 1rem;
+}
+
+.nav-boton-div:hover,
+.nav-boton-div:focus {
+  /* Pequeña animación para cuando se pone el
+   cursor sobre el boton de navegación */
+  transform: translateY(-0.25em);
+}
+
+.info {
+  /* Nos aseguramos que la informacion de la parte derecha tome
+  todo el espacio restante de la pantalla */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info2 {
+  /* Nos aseguramos que la informacion de la parte derecha tome
+  todo el espacio restante de la pantalla */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background: #3c3c3c;
+  padding-top: 3rem;
+  overflow: auto;
+}
+
+/* Bloque de informacion que centra los contenidos en la pantalla y apila
+los elementos de forma horizontal, esto para combinacion de imagenes y 
+texto */
+.bloque-info {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+
+/* Bloque de informacion que centra los contenidos en la pantalla y apila
+los elementos de forma horizontal, esto para combinacion de imagenes y 
+texto, este bloque en especifico es para la pagina de creditos */
+.bloque-info-creditos {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.texto-creditos {
+  margin: auto;
+}
+
+.titulo {
+  margin-left: 2rem;
+  color: #405994;
+}
+
+.bloque-texto,
+.bloque-imagen {
+  margin-right: 1rem;
+}
+
+
+/*Div que genera el efecto de un glitch o deformacion de las letras,
+esto es para el home */
+.glitch {
+  color: white;
+  font-size: 100px;
+  position: relative;
+  display: inline;
+  margin: auto;
+  margin-bottom: 0px;
+}
+
+/* Sentencia keyframe para cambiar gradualmente un conjunto de estilos hacia
+otro, esto para el efecto de glitch del titulo del home */
+@keyframes noise-anim {
+
+  /*Los porcentajes representan los intervalos en los que el css estara cambiando
+  constantemente */
+  /*La propieadad clip nos determina que porcion del documentos queremos presentar */
+  0% {
+    clip: rect(64px, 9999px, 77px, 0);
+  }
+  5% {
+    clip: rect(90px, 9999px, 15px, 0);
+  }
+  10% {
+    clip: rect(100px, 9999px, 38px, 0);
+  }
+  15% {
+    clip: rect(86px, 9999px, 56px, 0);
+  }
+  20% {
+    clip: rect(92px, 9999px, 31px, 0);
+  }
+  25% {
+    clip: rect(94px, 9999px, 53px, 0);
+  }
+  30% {
+    clip: rect(69px, 9999px, 39px, 0);
+  }
+  35% {
+    clip: rect(57px, 9999px, 37px, 0);
+  }
+  40% {
+    clip: rect(16px, 9999px, 98px, 0);
+  }
+  45% {
+    clip: rect(49px, 9999px, 49px, 0);
+  }
+  50% {
+    clip: rect(23px, 9999px, 34px, 0);
+  }
+  55% {
+    clip: rect(81px, 9999px, 61px, 0);
+  }
+  60% {
+    clip: rect(32px, 9999px, 49px, 0);
+  }
+  65% {
+    clip: rect(19px, 9999px, 78px, 0);
+  }
+  70% {
+    clip: rect(51px, 9999px, 85px, 0);
+  }
+  75% {
+    clip: rect(76px, 9999px, 41px, 0);
+  }
+  80% {
+    clip: rect(4px, 9999px, 51px, 0);
+  }
+  85% {
+    clip: rect(21px, 9999px, 33px, 0);
+  }
+  90% {
+    clip: rect(36px, 9999px, 86px, 0);
+  }
+  95% {
+    clip: rect(4px, 9999px, 88px, 0);
+  }
+  100% {
+    clip: rect(55px, 9999px, 22px, 0);
+  }
+}
+.glitch:after {
+  /*Elemento inmediatamente siguiente al texto del efecto glitch */
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+/* Sentencia keyframe para cambiar gradualmente un conjunto de estilos hacia
+otro, esto para el efecto de glitch del titulo del home */
+@keyframes noise-anim-2 {
+
+  /*Los porcentajes representan los intervalos en los que el css estara cambiando
+  constantemente */
+  /*La propieadad clip nos determina que porcion del documentos queremos presentar */
+  0% {
+    clip: rect(26px, 9999px, 38px, 0);
+  }
+  5% {
+    clip: rect(77px, 9999px, 35px, 0);
+  }
+  10% {
+    clip: rect(82px, 9999px, 2px, 0);
+  }
+  15% {
+    clip: rect(42px, 9999px, 36px, 0);
+  }
+  20% {
+    clip: rect(91px, 9999px, 19px, 0);
+  }
+  25% {
+    clip: rect(16px, 9999px, 47px, 0);
+  }
+  30% {
+    clip: rect(48px, 9999px, 27px, 0);
+  }
+  35% {
+    clip: rect(45px, 9999px, 92px, 0);
+  }
+  40% {
+    clip: rect(61px, 9999px, 25px, 0);
+  }
+  45% {
+    clip: rect(42px, 9999px, 1px, 0);
+  }
+  50% {
+    clip: rect(77px, 9999px, 50px, 0);
+  }
+  55% {
+    clip: rect(22px, 9999px, 85px, 0);
+  }
+  60% {
+    clip: rect(70px, 9999px, 27px, 0);
+  }
+  65% {
+    clip: rect(58px, 9999px, 13px, 0);
+  }
+  70% {
+    clip: rect(35px, 9999px, 95px, 0);
+  }
+  75% {
+    clip: rect(74px, 9999px, 67px, 0);
+  }
+  80% {
+    clip: rect(52px, 9999px, 5px, 0);
+  }
+  85% {
+    clip: rect(50px, 9999px, 82px, 0);
+  }
+  90% {
+    clip: rect(92px, 9999px, 2px, 0);
+  }
+  95% {
+    clip: rect(8px, 9999px, 14px, 0);
+  }
+  100% {
+    clip: rect(67px, 9999px, 53px, 0);
+  }
+}
+.glitch:before {
+  /*Elemento inmediatamente anterior al texto del efecto glitch */
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+/*Div que contiene el texto de descripcion en el home de la pagina */
+.description {
+  color: white;
+  font-size: 1.2rem;
+  margin: auto;
+  margin-top: 0px;
+}
+
+/* Aplicar cambios cuando la ventana sea de 1300px o menos de ancho*/
+@media only screen and (max-width: 1700px) {
+  /* Se reduce ancho de contenedor de menú de navegación vertical */
+  #contenedor-menu-nav {
+    width: 20%;
+  }
+
+  /* Icono mas pequeño */
+  #icono {
+    width: 4em;
+    height: 4em;
+  }
+
+  /* Se reduce ancho de contenedor de la información
+   superpuesta sobre el contenedor del menu */
+  #menu-info {
+    width: 20%;
+  }
+
+  /* Contenedor del icono home*/
+  #contenedor-icono {
+    margin-left: calc(50% - 2em); /* Calculo para centrar el icono */
+  }
+
+  .glitch {
+    font-size: 90px;
+  }
+}
+
+/* Aplicar cambios cuando la ventana sea de 1100px o menos de ancho*/
+@media only screen and (max-width: 1100px) {
+  /* Se reduce ancho de contenedor de menú de navegación vertical */
+  #contenedor-menu-nav {
+    width: 20%;
+    position: fixed; /* sostiene la posición aunque se haga scroll en el contenido */
+    z-index: 30; /* para asegurar que el menu esta por encima de todo lo demás*/
+    margin-left: -60%; /* se oculta porque se coloca por fuera de la ventana*/
+    margin-top: 4px;
+    transition: all 1s; /* la animación de desplegar el menu dura 1 segundo*/
+  }
+
+  .label-icon {
+    display: block; /* oculta el checkbox cuando no es necesario*/
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+
+  #btn-menu:checked ~ #contenedor-menu-nav {
+    /* el checkbox controla las dos posiciones del menu */
+    margin: 1px;
+    margin-top: 4rem;
+  }
+}
+
+/* Aplicar cambios cuando la ventana sea de 900px o menos de ancho*/
+@media only screen and (max-width: 900px) {
+  /* Se reduce ancho de contenedor de menú de navegación vertical */
+  #contenedor-menu-nav {
+    width: 25%;
+  }
+
+  /* Icono mas pequeño */
+  #icono {
+    width: 3.5em;
+    height: 3.5em;
+  }
+
+  /* Se reduce ancho de contenedor de la información
+   superpuesta sobre el contenedor del menu */
+  #menu-info {
+    width: 25%;
+  }
+
+  /* Contenedor del icono home*/
+  #contenedor-icono {
+    margin-left: calc(50% - 1.7em); /* Calculo para centrar el icono */
+  }
+
+  .glitch {
+    font-size: 70px;
+  }
+}
+
+/* Aplicar cambios cuando la ventana sea de 600px o menos de ancho*/
+@media only screen and (max-width: 600px) {
+  /* Se reduce ancho de contenedor de menú de navegación vertical */
+  #contenedor-menu-nav {
+    width: 30%;
+  }
+
+  /* Icono mas pequeño */
+  #icono {
+    width: 3em;
+    height: 3em;
+  }
+
+  /* Se reduce ancho de contenedor de la información superpuesta
+   sobre el contenedor del menu */
+  #menu-info {
+    width: 30%;
+  }
+
+  /* Contenedor del icono home*/
+  #contenedor-icono {
+    margin-left: calc(50% - 1.5em); /* Calculo para centrar el icono */
+  }
+
+  .glitch {
+    font-size: 50px;
+  }
+}
+
+/*Redondear las imagenes */
+img {
+  border-radius: 10%;
+}
+
+/* Algunas imagenes no las queremos redondear */
+.img-cuadrada {
+  border-radius: 0% !important;
+  width: 100% !important;
+  max-width: 1000px;
+}
+
+/* Propiedad especifica para la imagen del mapa de Kepler ya que esta tiene un tamaño,
+muy pequeño, por lo que queremos reducir su tamaño maximo */
+.img-cuadrada-kepler {
+  border-radius: 0% !important;
+  width: 100% !important;
+  max-width: 400px;
+}

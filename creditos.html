@@ -1,0 +1,159 @@
+<!-- Trabajo realizado por Juan Pablo Girón de Ingeniería de Sistemas para la materia de Gráfica Interactiva, impartida por el profesor Carlos Delgado -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta lang="es" />
+    <!-- Ícono de la pestaña del navegador-->
+    <link rel="icon" href="./imagenes/mars.png" />
+    <!-- Codigo css utilizado-->
+    <link rel="stylesheet" href="estilos.css" />
+
+    <title>Marte</title>
+  </head>
+
+  <body>
+    <!--Div principal que contiene el menu de navegación y la información -->
+    <div class="content">
+      <!-- menu de navegacion-->
+      <input
+        type="checkbox"
+        id="btn-menu"
+      /><!-- checkbox permite la opción boleana -->
+      <label class="label-icon" for="btn-menu"
+        ><img src="imagenes/menu.png" width="50px"
+      /></label>
+      <div id="contenedor-menu-nav">
+        <div id="nav-menu"></div>
+        <!-- Este div es para crear el cuadro vertical negro con opacidad -->
+        <div id="menu-info">
+          <!-- Este div es para poner los botones del menu -->
+          <nav>
+            <div id="contenedor-icono">
+              <!-- Ícono en formato svg para retornar al home -->
+              <a href="index.html" id="icono-home">
+                <svg
+                  id="icono"
+                  width="5em"
+                  height="5em"
+                  viewBox="0 0 16 16"
+                  class="bi bi-house-fill"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <div class="botones">
+              <a class="nav-boton" href="ubicacion.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Ubicación</h4>
+                </div></a
+              >
+            </div>
+            <div class="botones">
+              <a class="nav-boton" href="personajes.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Personajes</h4>
+                </div></a
+              >
+            </div>
+            <div class="botones">
+              <a class="nav-boton" href="actividades.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Actividades</h4>
+                </div></a
+              >
+            </div>
+            <div class="botones">
+              <a class="nav-boton" href="historia.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Historia</h4>
+                </div></a
+              >
+            </div>
+            <div class="botones">
+              <a class="nav-boton-seleccionado" href="creditos.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Créditos</h4>
+                </div></a
+              >
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Este div es para poner la informacion que cambia dependiendo de la pagina
+      seleccionada -->
+      <div class="info2">
+        <div class="bloque-info">
+          <h3 class="bloque-texto">
+            Trabajo realizado por Juan Pablo Girón para la materia de Gráfica
+            Interactiva, impartida por el profesor Carlos Delgado
+          </h3>
+        </div>
+
+        <div class="bloque-info">
+          <h1 class="titulo">Mapa de navegación del sitio</h1>
+        </div>
+
+        <!-- Mapa de navegacion-->
+        <div class="bloque-info">
+          <img src="imagenes/mapa_navegacion.png" class="img-cuadrada" alt="" />
+        </div>
+
+        <div class="bloque-info">
+          <h1 class="titulo">Bibliografia</h1>
+        </div>
+        <!-- Bibliografia-->
+        <div class="bloque-info-creditos">
+          <h4 class="texto-creditos">
+            [1] Favicon utilizado para la página tomado de
+            https://www.flaticon.com/free-icon/mars_124582
+          </h4>
+          <h4 class="texto-creditos">
+            [2] Background de marte tomado de
+            https://nerdist.com/article/mars-surface-4k-footage/
+          </h4>
+          <h4 class="texto-creditos">
+            [2] Background de marte tomado de
+            https://nerdist.com/article/mars-surface-4k-footage/
+          </h4>
+          <h4 class="texto-creditos">
+            [3] Caracterización de marte e imágenes tomado de
+            https://spaceplace.nasa.gov/all-about-mars/sp/
+          </h4>
+
+          <h4 class="texto-creditos">
+            [4] Imágenes e información de los rovers de Marte tomado de
+            https://spaceplace.nasa.gov/mars-rovers/sp/
+          </h4>
+
+          <h4 class="texto-creditos">
+            [5] Articulo National Geographic actividad geológica de Marte tomado
+            de
+            https://www.nationalgeographic.com.es/ciencia/confirmado-marte-esta-geologicamente-vivo_15213
+          </h4>
+
+          <h4 class="texto-creditos">
+            [6] Articulo Wikipedi historia de la observación de Marte tomado de
+            https://es.wikipedia.org/wiki/Historia_de_la_observaci%C3%B3n_de_Marte
+          </h4>
+
+          <h4 class="texto-creditos">
+            [7] Mapa de navegación hecho con Canva en https://www.canva.com/
+          </h4>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

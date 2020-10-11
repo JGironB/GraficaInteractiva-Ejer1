@@ -1,0 +1,214 @@
+<!-- Trabajo realizado por Juan Pablo Girón de Ingeniería de Sistemas para la materia de Gráfica Interactiva, impartida por el profesor Carlos Delgado -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta lang="es" />
+    <!-- Ícono de la pestaña del navegador-->
+    <link rel="icon" href="./imagenes/mars.png" />
+    <!-- Codigo css utilizado-->
+    <link rel="stylesheet" href="estilos.css" />
+
+    <title>Marte</title>
+  </head>
+
+  <body>
+    <!--Div principal que contiene el menu de navegación y la información -->
+    <div class="content">
+      <!-- menu de navegacion-->
+      <input
+        type="checkbox"
+        id="btn-menu"
+      /><!-- checkbox permite la opción boleana -->
+      <label class="label-icon" for="btn-menu"
+        ><img src="imagenes/menu.png" width="50px"
+      /></label>
+      <div id="contenedor-menu-nav">
+        <div id="nav-menu"></div>
+        <!-- Este div es para crear el cuadro vertical negro con opacidad -->
+        <div id="menu-info">
+          <!-- Este div es para poner los botones del menu -->
+          <nav>
+            <div id="contenedor-icono">
+              <!-- Ícono en formato svg para retornar al home -->
+              <a href="index.html" id="icono-home">
+                <svg
+                  id="icono"
+                  width="5em"
+                  height="5em"
+                  viewBox="0 0 16 16"
+                  class="bi bi-house-fill"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <div class="botones">
+              <a class="nav-boton" href="ubicacion.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Ubicación</h4>
+                </div></a
+              >
+            </div>
+            <div class="botones">
+              <a class="nav-boton" href="personajes.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Personajes</h4>
+                </div></a
+              >
+            </div>
+            <div class="botones">
+              <a class="nav-boton-seleccionado" href="actividades.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Actividades</h4>
+                </div></a
+              >
+            </div>
+            <div class="botones">
+              <a class="nav-boton" href="historia.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Historia</h4>
+                </div></a
+              >
+            </div>
+            <div class="botones">
+              <a class="nav-boton" href="creditos.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Créditos</h4>
+                </div></a
+              >
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Este div es para poner la informacion que cambia dependiendo de la pagina
+      seleccionada -->
+      <div class="info2">
+        <!-- Bloque de texto con imagen -->
+        <div class="bloque-info">
+          <h1 class="titulo">Marte está geológicamente vivo!</h1>
+        </div>
+
+        <div class="bloque-info">
+          <h3 class="bloque-texto">
+            El módulo de aterrizaje InSight de la NASA llegó a Marte el 26 de
+            noviembre de 2018, aterrizando en la región de Elysium Planitia, en
+            un pequeño cráter informalmente llamado Homestead hollow. InSight
+            tiene como objetivo examinar la estructura interior y la composición
+            del planeta rojo, lo que ayuda enormemente a los científicos a
+            comprender los complejos procesos que han dado forma a nuestro
+            vecino en el sistema solar. Ahora, tras 10 meses de misión, se
+            acaban de presentar los resultados de los experimentos llevados en
+            la superficie del planeta en un conjunto de documentos publicados en
+            las revistas Nature Geoscience y Nature Communications. En estos se
+            demuestra que Marte es sísmicamente activo a la vez que se informa
+            de la naturaleza de su compleja atmósfera interior, campo magnético
+            y geología.
+          </h3>
+        </div>
+
+        <div class="bloque-info">
+          <h1 class="titulo">Mapa de actividad sísmica de Marte</h1>
+        </div>
+
+        <div class="bloque-info">
+          <img
+            src="imagenes/actividad_sismica.png"
+            class="img-cuadrada"
+            alt=""
+          />
+        </div>
+
+        <div class="bloque-info">
+          <h1 class="titulo">
+            Sismicidad y magnetismo: los latidos de un planeta rocoso
+          </h1>
+        </div>
+
+        <div class="bloque-info">
+          <!-- Bloque de texto con imagen -->
+          <h3 class="bloque-texto">
+            Así, en un documento general publicado en Nature Geoscience, se
+            destacan algunos de los hallazgos clave del primer año de la misión
+            en Marte. Estos incluyen la primera detección inequívoca de
+            terremotos, a los que los científicos se refieren como "marsquakes",
+            lo que en una traducción al castellano podríamos referirnos como
+            "martemotos", y entre los que se incluyen más de 20 eventos de
+            magnitud entre 3 y 4. No obstante, la actividad sísmica de Marte se
+            explora más detalladamente en otros dos documentos presentados por
+            la NASA, también resultado del éxito de la misión. De este modo, a
+            día 30 de septiembre de 2019, InSight ya había detectado 174 eventos
+            sísmicos en Marte, 24 de los cuales son de magnitud relativamente
+            grande y de fuentes distantes. Además los investigadores detallan
+            que la ubicación de dos de los martemotos más grandes registrados
+            podría ubicarse en Cerberus Fossae, una región que ha mostrado
+            evidencia de actividad volcánica y tectónica reciente.
+          </h3>
+        </div>
+
+        <div class="bloque-info">
+          <!-- Bloque de texto con imagen -->
+          <h3 class="bloque-texto">
+            También los campos magnéticos proporcionan una ventana a la
+            estructura y evolución interior de un planeta, incluidos sus
+            entornos atmosféricos y espaciales. En este sentido los satélites en
+            Marte han medido campos magnéticos de la corteza y los cuales
+            parecen apuntar a la existencia de una antigua dinamo. Estos campos
+            interactúan con el viento solar para generar campos magnéticos
+            transitorios y corrientes eléctricas en la atmósfera superior del
+            Planeta Rojo. Pero las mediciones de InSight han hallado, además,
+            que este campo magnético - al menos en los aledaños del punto de
+            aterrizaje- es diez veces más fuerte de lo previsto por los modelos
+            basados ​​en satélites. Por su parte, de los datos recogidos por la
+            nave, los científicos también infieren la presencia de rocas
+            magnetizadas a unos 150 kilómetros de profundidad de la superficie
+            de Elysium Planitia, lo que también parece apuntar a que el interior
+            metálico de Marte pudo funcionar en su día como una dinamo del mismo
+            modo en que hoy lo hace la Tierra.
+          </h3>
+        </div>
+
+        <div class="bloque-info">
+          <h1 class="titulo">
+            Luces, ruido y movimiento en la atmósfera marciana
+          </h1>
+        </div>
+
+        <div class="bloque-info">
+          <!-- Bloque de texto con imagen -->
+          <h3 class="bloque-texto">
+            La atmósfera de Marte es delgada, aunque rica en aerosoles de polvo,
+            y cubre una superficie seca. Como tal, Marte brinda la oportunidad
+            de expandir nuestro conocimiento sobre las dinámicas atmosféricas
+            más allá de los datos que se pueden obtener de la atmósfera de la
+            Tierra. El módulo de aterrizaje InSight está midiendo la atmósfera
+            de Marte con una continuidad, precisión y frecuencia de muestreo sin
+            precedentes, revelando nuevos fenómenos atmosféricos. InSight es
+            especialmente sensible al clima regional y a gran escala y obtuvo
+            una cobertura detallada in situ de una tormenta de polvo regional en
+            Marte. Las imágenes han permitido medir las velocidades del viento a
+            gran altitud y revelar una especie de "resplandores en el aire" que
+            corresponden a débiles emisiones producidas por reacciones
+            fotoquímicas en la atmósfera media. Las mediciones meteorológicas
+            también han producido un respetable catálogo de ondas de gravedad
+            atmosférica. A partir de estas mediciones, los científicos también
+            han descubierto infrasonidos marcianos de inesperadas similitudes
+            con los de la Tierra, y sugieren que estas observaciones resultarán
+            clave en el futuro estudio de la atmósfera marciana
+          </h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+<!-- Trabajo realizado por Juan Pablo Girón de Ingeniería de Sistemas para la materia de Gráfica Interactiva, impartida por el profesor Carlos Delgado -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta lang="es" />
+    <!-- Ícono de la pestaña del navegador-->
+    <link rel="icon" href="./imagenes/mars.png" />
+    <!-- Codigo css utilizado-->
+    <link rel="stylesheet" href="estilos.css" />
+
+    <title>Marte</title>
+  </head>
+
+  <body>
+    <!--Div principal que contiene el menu de navegación y la información -->
+    <div class="content">
+      <!-- menu de navegacion-->
+      <input
+        type="checkbox"
+        id="btn-menu"
+      /><!-- checkbox permite la opción boleana -->
+      <label class="label-icon" for="btn-menu"
+        ><img src="imagenes/menu.png" width="50px"
+      /></label>
+      <div id="contenedor-menu-nav">
+        <div id="nav-menu"></div>
+        <!-- Este div es para crear el cuadro vertical negro con opacidad -->
+        <div id="menu-info">
+          <!-- Este div es para poner los botones del menu -->
+          <nav>
+            <div id="contenedor-icono">
+              <!-- Ícono en formato svg para retornar al home -->
+              <a href="index.html" id="icono-home">
+                <svg
+                  id="icono"
+                  width="5em"
+                  height="5em"
+                  viewBox="0 0 16 16"
+                  class="bi bi-house-fill"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <div class="botones">
+              <a class="nav-boton-seleccionado" href="ubicacion.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Ubicación</h4>
+                </div></a
+              >
+            </div>
+            <div class="botones">
+              <a class="nav-boton" href="personajes.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Personajes</h4>
+                </div></a
+              >
+            </div>
+            <div class="botones">
+              <a class="nav-boton" href="actividades.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Actividades</h4>
+                </div></a
+              >
+            </div>
+            <div class="botones">
+              <a class="nav-boton" href="historia.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Historia</h4>
+                </div></a
+              >
+            </div>
+            <div class="botones">
+              <a class="nav-boton" href="creditos.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Créditos</h4>
+                </div></a
+              >
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Este div es para poner la informacion que cambia dependiendo de la pagina
+      seleccionada -->
+      <div class="info2">
+        <h1 class="titulo">Todo sobre Marte</h1>
+        <!-- Bloque de texto con imagen -->
+        <div class="bloque-info">
+          <h3 class="bloque-texto">
+            Marte es un planeta desértico y frío. Es la mitad del tamaño de la
+            Tierra, y también recibe el nombre de "planeta rojo". Es rojo por el
+            hierro oxidado que tiene en el suelo. Como la Tierra, Marte tiene
+            estaciones, casquetes polares, volcanes, cañones y clima. Tiene una
+            atmósfera poco densa hecha de dióxido de carbono, nitrógeno y argón.
+            Hay signos de antiguas inundaciones en Marte, pero ahora el agua
+            existe principalmente en su polvo helado y sus nubes delgadas. En
+            algunas laderas marcianas, se han encontrado pruebas de agua líquida
+            salada. Los científicos quieren saber si Marte podría haber tenido
+            seres vivos en el pasado. También quieren saber si Marte podría
+            albergar vida ahora o en el futuro.
+          </h3>
+          <img src="imagenes/marte_1.jpg" width="300" height="300" alt="" />
+        </div>
+
+        <div class="bloque-info">
+          <h3 class="bloque-texto">
+            Conoce sobre más sobre Marte haciendo click
+            <a
+              href="https://spaceplace.nasa.gov/all-about-mars/sp/"
+              target="_blank"
+              >aquí</a
+            >
+          </h3>
+        </div>
+        <h1 class="titulo">¿Cómo ubicar a Marte?</h1>
+        <!-- Bloque de texto con imagen -->
+        <div class="bloque-info">
+          <img
+            src="imagenes/marte_2.jpg"
+            class="bloque-imagen"
+            width="300"
+            height="300"
+            alt=""
+          />
+          <h3 class="bloque-texto">
+            Marte es más pequeño y menos luminoso (y por tanto más difícil de
+            observar) que Júpiter, Saturno y Venus. Pero es fácil de localizar y
+            de reconocer a simple vista. La principal característica que lo
+            diferencia de otros objetos celestes es su color. Dependerá del
+            momento, pero siempre tendrá un color anaranjado, rojizo o
+            amarillento. Cuando se encuentra cerca de la oposición es más
+            luminoso y alcanza una magnitud aparente de -2,8, lo localizarás con
+            facilidad. Si tienes dudas para distinguirlo recuerda que los
+            planetas tienen un brillo constante y que no parpadean como hacen
+            las estrellas. Pero no siempre podrás verlo en el cielo. Dependerá
+            de la época del año, de la hora del día y de tu localización. La
+            forma más fácil para saber si podrás verlo esta noche es usar una
+            app como Star Walk 2, Sky Map o Planets. Pero también puedes saberlo
+            ahora mismo sin que tengas que descargarte nada. Desde la web Time
+            and Date puedes saber que objetos astronómicos son visibles esta
+            noche desde tu localización.
+          </h3>
+        </div>
+
+        <!-- Iframe que contiene un mapa de marte de Google -->
+        <div class="bloque-info">
+          <iframe
+            src="https://www.google.com/mars/"
+            title="mapa de marte"
+            width="100%"
+            height="500"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

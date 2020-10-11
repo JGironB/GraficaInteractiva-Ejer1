@@ -1,0 +1,299 @@
+<!-- Trabajo realizado por Juan Pablo Girón de Ingeniería de Sistemas para la materia de Gráfica Interactiva, impartida por el profesor Carlos Delgado -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta lang="es" />
+    <!-- Ícono de la pestaña del navegador-->
+    <link rel="icon" href="./imagenes/mars.png" />
+    <!-- Codigo css utilizado-->
+    <link rel="stylesheet" href="estilos.css" />
+
+    <title>Marte</title>
+  </head>
+
+  <body>
+    <!--Div principal que contiene el menu de navegación y la información -->
+    <div class="content">
+      <!-- menu de navegacion-->
+      <input
+        type="checkbox"
+        id="btn-menu"
+      /><!-- checkbox permite la opción boleana -->
+      <label class="label-icon" for="btn-menu"
+        ><img src="imagenes/menu.png" width="50px"
+      /></label>
+      <div id="contenedor-menu-nav">
+        <div id="nav-menu"></div>
+        <!-- Este div es para crear el cuadro vertical negro con opacidad -->
+        <div id="menu-info">
+          
+          <!-- Definimos el nav para el menu de navegacion  -->
+          <nav>
+            <!-- Este div es para poner los botones del menu -->
+            <div id="contenedor-icono">
+              <!-- Ícono en formato svg para retornar al home -->
+              <a href="index.html" id="icono-home">
+                <svg
+                  id="icono"
+                  width="5em"
+                  height="5em"
+                  viewBox="0 0 16 16"
+                  class="bi bi-house-fill"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Boton de menu: ubicacion -->
+            <div class="botones">
+              <a class="nav-boton" href="ubicacion.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Ubicación</h4>
+                </div></a
+              >
+            </div>
+
+            <!-- Boton de menu: personajes -->
+            <div class="botones">
+              <a class="nav-boton-seleccionado" href="personajes.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Personajes</h4>
+                </div></a
+              >
+            </div>
+
+            <!-- Boton de menu: actividades -->
+            <div class="botones">
+              <a class="nav-boton" href="actividades.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Actividades</h4>
+                </div></a
+              >
+            </div>
+
+            <!-- Boton de menu: historia -->
+            <div class="botones">
+              <a class="nav-boton" href="historia.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Historia</h4>
+                </div></a
+              >
+            </div>
+
+            <!-- Boton de menu: creditos -->
+            <div class="botones">
+              <a class="nav-boton" href="creditos.html"
+                ><div class="nav-boton-div">
+                  <h4 class="texto-boton">Créditos</h4>
+                </div></a
+              >
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Este div es para poner la informacion que cambia dependiendo de la pagina
+      seleccionada -->
+      <div class="info2">
+        <!-- Bloque de texto con imagen -->
+        <h1 class="titulo">Los Rovers de Marte</h1>
+        <div class="bloque-info">
+          <h3 class="bloque-texto">
+            Marte es un planeta fascinante. Esta frío, helado y cubierto de
+            polvo rojizo y la suciedad. Como Tierra, tiene volcanes, barrancos y
+            llanuras planas. Los científicos también pueden ver canales que
+            parecen tallados por ríos y arroyos hace mucho, mucho tiempo. Con
+            los años, hemos enviado cuatro vehículos robotizados, o rovers, para
+            aprender más sobre Marte. ¡Y los científicos de la NASA planean
+            enviar uno más en pocos años!. Desde la década de 1970, los
+            científicos han estado enviando naves espaciales a Marte. Varios
+            tipos diferentes de naves espaciales han sido enviados al Planeta
+            Rojo a través de los años, y todos ellos tienen diferentes
+            especialidades. Un tipo, llamado órbita, orbita Marte, tomando fotos
+            mientras hace zoom alrededor del planeta. Otras naves espaciales,
+            llamadas landers, generan fotos e información desde sus puntos de
+            aterrizaje en la superficie de Marte. Los Rovers tienen ruedas y se
+            especializan en moverse. Aterrizan en la superficie de Marte y
+            conducen alrededor de los diversos puntos. Rovers ayudan a los
+            científicos en su búsqueda para entender de que las diferentes
+            partes del planeta están hechas. Marte se compone de un montón de
+            diferentes tipos de rocas, y cada roca se compone de una mezcla de
+            productos químicos. Un rover puede conducir alrededor a diversas
+            áreas, estudiando los diversos productos químicos en cada roca.
+            Estos químicos pueden decir a los científicos algo sobre los
+            ambientes que cambiaron esa roca con el tiempo
+          </h3>
+          <img src="imagenes/marte_3.jpg" width="300" height="300" alt="" />
+        </div>
+
+        <!-- Menu de navegacion interno-->
+        <h1 class="titulo">Menú de navegación interna</h1>
+        <nav>
+          <ol>
+            <li>
+              <a class="nav-boton" href="#sojourner"
+                ><h3 class="nav-boton-div">Sojourner</h3></a
+              >
+            </li>
+            <li>
+              <a class="nav-boton" href="#spirit"
+                ><h3 class="nav-boton-div">Spirit y Opportunity</h3></a
+              >
+            </li>
+            <li>
+              <a class="nav-boton" href="#curiosity"
+                ><h3 class="nav-boton-div">Curiosity</h3></a
+              >
+            </li>
+            <li>
+              <a class="nav-boton" href="#perseverance"
+                ><h3 class="nav-boton-div">Perseverance</h3></a
+              >
+            </li>
+          </ol>
+        </nav>
+        <h1 class="titulo" id="sojourner">Sojourner</h1>
+        <!-- Bloque de texto con imagen -->
+        <div class="bloque-info">
+          <h3 class="bloque-texto">
+            En 1997, los científicos de la NASA hicieron algo bastante
+            sorprendente. Por primera vez, utilizaron un robot de ruedas
+            pequeñas para estudiar la superficie de Marte. Este explorador
+            robótico, llamado rover, fue nombrado Sojourner. Sólo tenía el
+            tamaño de un horno de microondas. Sin embargo, pasó a compartir
+            mucha información nueva importante con los científicos. Sojourner no
+            estaba solo durante su viaje a Marte. Viajó dentro de una nave
+            espacial, un aterrizador. El aterrizador tenía forma de pirámide y
+            estaba cubierto de bolsas de aire. Los airbags ayudaron a que el
+            aterrizador tenga un aterrizaje seguro y lleno de baches. La forma
+            de la pirámide ayudó a asegurar que el aterrizador y el rover
+            pudieran voltearse hacia la derecha, independientemente de cómo
+            aterrizaran. Después de que el aterrizador aterrizó en Marte, un
+            panel se abrió y Sojourner salió para comenzar a explorar. El rover
+            exploró una zona de Marte cerca de su lugar de aterrizaje llamado
+            Ares Vallis. Los científicos estaban interesados en esta área porque
+            parecía el sitio de una antigua inundación. El agua que corría de
+            una inundación habría movido muchas rocas y suciedad en un solo
+            lugar. Esto significa que el rover podría estudiar un montón de
+            diferentes tipos de rocas sin viajar muy lejos. A los ingenieros
+            también les gustó el área porque parecía un lugar plano y seguro
+            para Sojourner.
+          </h3>
+          <img src="imagenes/sojourner.png" width="300" height="500" alt="" />
+        </div>
+
+        <h1 class="titulo" id="spirit">Spirit y Opportunity</h1>
+        <!-- Bloque de texto con imagen -->
+        <div class="bloque-info">
+          <img
+            src="imagenes/spirit.png"
+            class="bloque-imagen"
+            width="300"
+            height="500"
+            alt=""
+          />
+          <h3 class="bloque-texto">
+            Después del éxito del rover Sojourner, la NASA quería enviar más
+            rovers para aprender sobre Marte. Así, en 2003, enviaron dos rovers
+            al Planeta Rojo. Los rovers fueron nombrados Spirit y Opportunity.
+            Juntos, formaron parte de la misión Mars Exploration Rover. Spirit y
+            Opportunity fueron hechos como gemelos. Ambos portaban todos los
+            mismos instrumentos científicos. Y cada uno era aproximadamente del
+            tamaño de un carrito de golf. On Tierra, donde hay agua, hay vida.
+            Spirit y Opportunity fueron enviados a Marte para encontrar más
+            pistas sobre la historia del agua allí, y para ver si el Planeta
+            Rojo podría haber tenido formas de vida. Para hacer esto, los
+            científicos enviaron a los dos rovers a dos sitios de aterrizaje
+            diferentes. Los rovers aterrizaron en lados opuestos del planeta.
+            Spirit aterrizó en una región llamada cráter Gusev. Los científicos
+            querían explorar el cráter porque pensaban que podría haber
+            aguantado agua hace mucho tiempo. Segun fotos tomados por los
+            satélites, los científicos pensaron que parecía que varios ríos
+            grandes fluyeron en el cráter de Gusev. Opportunity aterrizó en el
+            otro lado de Marte en un área llamada Meridiani Planum. Esta región
+            era agradable porque era un lugar plano y seguro para el rover.
+            También, estudios con un satélite alrededor de Marte mostraron que
+            podría contener un mineral llamado hematita gris. En la Tierra, la
+            hematita gris frecuentemente se ubica en presencia de agua.
+          </h3>
+        </div>
+
+        <h1 class="titulo" id="curiosity">Curiosity</h1>
+        <!-- Bloque de texto con imagen -->
+        <div class="bloque-info">
+          <h3 class="bloque-texto">
+            En la Tierra, donde hay agua, hay seres vivos. Sabemos que Marte
+            tenía agua hace mucho tiempo. ¿Pero también tenía otras condiciones
+            necesarias de vida? Para averiguarlo, la NASA envió el rover
+            Curiosity a Marte. Curiosity es el robot más grande aterrizado en
+            otro planeta. Es del tamaño de un pequeño todoterreno. Debido a que
+            Curiosity es tan grande, también tiene ruedas más grandes que los
+            rovers anteriores. Esto le ayuda a rodar sobre las rocas y la arena
+            sin quedar atascado. Sin embargo, en un largo día de conducción,
+            sólo viaja unos 660 pies. La curiosidad aterrizó en Gale Crater.
+            Este cráter es especial porque tiene una montaña alta en el medio.
+            La montaña tiene muchas capas de roca. Cada capa está hecha de
+            diferentes minerales de diferentes períodos de tiempo. Estos
+            minerales podrían decir a los científicos acerca de la historia del
+            agua en Marte. El rover utiliza muchos instrumentos científicos para
+            estudiar las rocas en el cráter Gale. Curiosity usó su taladro para
+            hacer un agujero en una roca que alguna vez fue barro en el fondo de
+            un lago. Uno de sus otros instrumentos estudió el polvo perforado de
+            la roca. Esta información ayudó a los científicos a aprender que el
+            cráter de Gale tenía componentes que la vida antigua habría
+            necesitado para sobrevivir.
+          </h3>
+          <img src="imagenes/curiosity.png" width="300" height="500" alt="" />
+        </div>
+
+        <h1 class="titulo" id="perseverance">Perseverance</h1>
+        <!-- Bloque de texto con imagen -->
+        <div class="bloque-info">
+          <img
+            src="imagenes/perseverance.png"
+            class="bloque-imagen"
+            width="300"
+            height="500"
+            alt=""
+          />
+          <h3 class="bloque-texto">
+            Rovers en Marte han recogido pruebas de agua y algunos de los
+            componentes químicos de la vida. Los científicos piensan que podría
+            ser posible que la vida existiera en Marte hace mucho tiempo. Si
+            había seres vivos, probablemente eran organismos pequeños, algo así
+            como bacterias aquí en la tierra. Pero, ¿empezó la vida en Marte? La
+            misión Mars 2020 espera poder responder a esa pregunta. La misión
+            enviará un rover muy similar a Curiosity para explorar las rocas, la
+            suciedad y el aire en Marte. Igual que Curiosity, el Perseverance
+            rover es del tamaño de un todoterreno pequeño. El nuevo rover tiene
+            un objetivo diferente y diferentes instrumentos. Buscará
+            directamente signos de vida pasada en Marte. El nuevo rover también
+            experimentará con un recurso natural que sería útil en la
+            planificación de una misión humana a Marte. La atmósfera de Marte
+            esta compuesta sobre todo de un gas llamado dióxido de carbono. Pero
+            muchos seres vivos (incluyendo humanos) necesitan oxígeno para
+            respirar. Si un ser humano fuera a Marte, tendría que traer mucho
+            oxígeno. Sin embargo, no hay mucho espacio en la nave espacial para
+            traer oxígeno líquido. El rover probará un método para obtener
+            oxígeno del aire en la atmósfera marciana. Esto ayudará a la NASA a
+            planear los mejores diseños para enviar astronautas humanos a
+            explorar Marte un día. El rover no se lanzará hasta 2020, por lo que
+            los científicos todavía están decidiendo dónde debe aterrizar el
+            explorador para explorar el Planeta Rojo. ¡Manténganse atentos!
+          </h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
